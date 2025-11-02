@@ -72,17 +72,14 @@ function Settings() {
         </button>
       </div>
 
-      {/* Profile Section */}
+    
       {activeSection === "profile" && (
         <div className="space-y-6">
-          {/* Profile Card */}
           <div className="bg-white rounded-2xl border border-blue-100 shadow-sm overflow-hidden">
-            {/* Header with blue gradient */}
             <div className="bg-gradient-to-r from-blue-500 to-blue-700 h-32"></div>
-            
-            {/* Profile Content */}
+
             <div className="px-8 pb-8">
-              {/* Profile Picture */}
+   
               <div className="flex items-end space-x-6 -mt-16 mb-8">
                 <div className="relative">
                   <div className="w-32 h-32 bg-white border-4 border-white rounded-full shadow-lg flex items-center justify-center">
@@ -105,7 +102,7 @@ function Settings() {
                 </div>
               </div>
 
-              {/* Profile Form */}
+        
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
@@ -178,7 +175,7 @@ function Settings() {
                 </div>
               </div>
 
-              {/* Save Button */}
+         
               <div className="mt-8 pt-6 border-t border-blue-100 flex justify-end">
                 <button
                   onClick={handleSaveProfile}
@@ -193,10 +190,9 @@ function Settings() {
         </div>
       )}
 
-      {/* Security Section */}
+   
       {activeSection === "security" && (
         <div className="space-y-6">
-          {/* Change Password Card */}
           <div className="bg-white rounded-2xl border border-blue-100 p-8 shadow-sm">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-blue-100 rounded-xl">

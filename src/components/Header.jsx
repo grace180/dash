@@ -48,10 +48,10 @@ function Header({ activeTab, setSidebarOpen, onFilterChange }) {
     }
   };
 
-  // Check if current tab should hide filters
+  // hide filters
   const hideFilters = activeTab.toLowerCase() === "settings" || activeTab.toLowerCase() === "logout";
   
-  // Check if current tab should hide month selector
+  // hide month selector
   const hideMonthSelector = hideFilters || activeTab.toLowerCase() === "documents";
 
   return (
@@ -62,7 +62,7 @@ function Header({ activeTab, setSidebarOpen, onFilterChange }) {
 
       <div className="flex items-center justify-between px-8">
         <div className="flex items-center space-x-3">
-          {/* Search Bar - Hidden for Settings and Logout */}
+      
           {!hideFilters && (
             <div className="px-3 hidden md:flex items-center bg-black/10 backdrop-blur-xl border border-black/20 rounded-2xl py-2 w-60 group hover:text-black/70 transition-all">
               <Search className="h-5 w-5 text-black/70 transition-all" />
@@ -93,10 +93,9 @@ function Header({ activeTab, setSidebarOpen, onFilterChange }) {
           )}
         </div>
 
-        {/* Filters - Hidden for Settings and Logout */}
+    
         {!hideFilters && (
           <div className="flex items-center space-x-4">
-            {/* Category Select - Only for Dashboard */}
             {activeTab === "dashboard" && (
               <select
                 value={selectedCategory}
@@ -113,8 +112,7 @@ function Header({ activeTab, setSidebarOpen, onFilterChange }) {
                 <option value="cc">Credit Card</option>
               </select>
             )}
-
-            {/* Month Selector - Hidden for Documents, Settings, and Logout */}
+            
             {!hideMonthSelector && (
               <div className="relative">
                 <button
